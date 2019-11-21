@@ -16,6 +16,16 @@ function mouseClicked() {
 	setup();
 }
 
+function keyPressed() {
+	if (keyCode === LEFT_ARROW && resolution>20){
+		resolution -= 10;
+		setup();
+	}else if (keyCode === RIGHT_ARROW && resolution<40) {
+		resolution += 10;
+		setup();
+	}
+}
+
 function setup() {
 	var canvas = createCanvas(displayWidth, displayHeight);
 	canvas.parent("sketch");
