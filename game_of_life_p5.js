@@ -6,11 +6,10 @@ function make2DArray(cols, rows){
 	return arr;
 }
 
-let colors = [255, 0];
 let grid;
 let cols;
 let rows;
-var resolution = 20;
+let resolution = 20;
 
 function mouseClicked() {
 	setup();
@@ -27,10 +26,10 @@ function keyPressed() {
 }
 
 function setup() {
-	var canvas = createCanvas(displayWidth, displayHeight);
+	let canvas = createCanvas(displayWidth, displayHeight);
 	canvas.parent("sketch");
-	cols = width/resolution;
-	rows = height/resolution;
+	cols = Math.round(width/resolution);
+	rows = Math.round(height/resolution);
 	grid = make2DArray(cols, rows);
 	for (let col=0; col<cols; col++) {
 		for (let row=0; row<rows; row++){
